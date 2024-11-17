@@ -1,0 +1,59 @@
+\begin{theindex}
+
+  \item {\texorpdfstring{$\sim$}{\string~}MergeSort}
+    \subitem {MergeSort}, \hyperpage{6}
+
+  \indexspace
+
+  \item {arr}
+    \subitem {MergeSort}, \hyperpage{8}
+
+  \indexspace
+
+  \item {getArray}
+    \subitem {MergeSort}, \hyperpage{7}
+  \item {GTest/test.cpp}, \hyperpage{9}
+
+  \indexspace
+
+  \item {merge}
+    \subitem {MergeSort}, \hyperpage{7}
+  \item {MergeSort}, \hyperpage{5}
+    \subitem {\texorpdfstring{$\sim$}{\string~}MergeSort}, 
+		\hyperpage{6}
+    \subitem {arr}, \hyperpage{8}
+    \subitem {getArray}, \hyperpage{7}
+    \subitem {merge}, \hyperpage{7}
+    \subitem {MergeSort}, \hyperpage{6}
+    \subitem {mergeSort}, \hyperpage{7}
+    \subitem {printArray}, \hyperpage{7}
+    \subitem {setArray}, \hyperpage{8}
+    \subitem {size}, \hyperpage{8}
+    \subitem {sort}, \hyperpage{8}
+  \item {mergeSort}
+    \subitem {MergeSort}, \hyperpage{7}
+  \item {MergeSort/MergeSort.cpp}, \hyperpage{17}
+  \item {MergeSort/MergeSort.h}, \hyperpage{18}
+
+  \indexspace
+
+  \item {printArray}
+    \subitem {MergeSort}, \hyperpage{7}
+
+  \indexspace
+
+  \item {setArray}
+    \subitem {MergeSort}, \hyperpage{8}
+  \item {size}
+    \subitem {MergeSort}, \hyperpage{8}
+  \item {sort}
+    \subitem {MergeSort}, \hyperpage{8}
+
+  \indexspace
+
+  \item {TEST}
+    \subitem {test.cpp}, \hyperpage{10--16}
+  \item {test.cpp}
+    \subitem {TEST}, \hyperpage{10--16}
+
+\end{theindex}

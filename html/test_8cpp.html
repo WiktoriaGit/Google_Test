@@ -1,0 +1,658 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pl">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.12.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>MergeSort z użyciem Google Test: Dokumentacja pliku GTest/test.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">MergeSort z użyciem Google Test
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano za pomocą Doxygen 1.12.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Szukaj',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Wczytywanie...</div>
+<div class="SRStatus" id="Searching">Szukanie...</div>
+<div class="SRStatus" id="NoMatches">Brak dopasowań</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_380ccb096909a8c9bb60a7591c6a18b1.html">GTest</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Funkcje</a>  </div>
+  <div class="headertitle"><div class="title">Dokumentacja pliku test.cpp</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;pch.h&quot;</code><br />
+<code>#include &quot;<a class="el" href="_merge_sort_8h_source.html">../MergeSort/MergeSort.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_merge_sort_8cpp_source.html">../MergeSort/MergeSort.cpp</a>&quot;</code><br />
+<code>#include &lt;algorithm&gt;</code><br />
+<code>#include &lt;cstdlib&gt;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Funkcje</h2></td></tr>
+<tr class="memitem:aeb63d86021126b60561cf04ad61691cf" id="r_aeb63d86021126b60561cf04ad61691cf"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aeb63d86021126b60561cf04ad61691cf">TEST</a> (Sortowanie, TablicaNiezmieniona)</td></tr>
+<tr class="memdesc:aeb63d86021126b60561cf04ad61691cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test który sprawdza, czy funkcja zachowuje tablicę niezmienioną, gdy ona jest już posortowana rosnąco.  <br /></td></tr>
+<tr class="separator:aeb63d86021126b60561cf04ad61691cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a87b54bad20017e2bd24c706b607333d3" id="r_a87b54bad20017e2bd24c706b607333d3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a87b54bad20017e2bd24c706b607333d3">TEST</a> (Sortowanie, TablicaNiezmienionaFail)</td></tr>
+<tr class="memdesc:a87b54bad20017e2bd24c706b607333d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test który sprawdza, czy test poprawnie zrobi fail, gdy ręcznie ustawimy inną wartość.  <br /></td></tr>
+<tr class="separator:a87b54bad20017e2bd24c706b607333d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a065cebb812a474033c5eccfaddb3152f" id="r_a065cebb812a474033c5eccfaddb3152f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a065cebb812a474033c5eccfaddb3152f">TEST</a> (Sortowanie, SortowanieTablicyOdwrotnejKolejnosci)</td></tr>
+<tr class="memdesc:a065cebb812a474033c5eccfaddb3152f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test który sprawdza, czy funkcja poprawnie przesortuje tablicę podaną w odwrotnej kolejności.  <br /></td></tr>
+<tr class="separator:a065cebb812a474033c5eccfaddb3152f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d4154d2944f39c12cda125ce22304f7" id="r_a3d4154d2944f39c12cda125ce22304f7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3d4154d2944f39c12cda125ce22304f7">TEST</a> (Sortowanie, SortowanieTablicyUjemnychWartosci)</td></tr>
+<tr class="memdesc:a3d4154d2944f39c12cda125ce22304f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test który sprawdza, czy funkcja poprawnie przesortuje tablicę ujemnych wartości.  <br /></td></tr>
+<tr class="separator:a3d4154d2944f39c12cda125ce22304f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a50a7a6985417cab655727d66906fc85a" id="r_a50a7a6985417cab655727d66906fc85a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a50a7a6985417cab655727d66906fc85a">TEST</a> (Sortowanie, SortowanieTablicyUjemnychIDodatnichWartosci)</td></tr>
+<tr class="memdesc:a50a7a6985417cab655727d66906fc85a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test który sprawdza, czy funkcja poprawnie przesortuje tablicę ujemnych i dodatnich wartości.  <br /></td></tr>
+<tr class="separator:a50a7a6985417cab655727d66906fc85a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab520e87e20fb655d2b46b12b795b082b" id="r_ab520e87e20fb655d2b46b12b795b082b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab520e87e20fb655d2b46b12b795b082b">TEST</a> (Sortowanie, SortowanieTablicyZDuplikatami)</td></tr>
+<tr class="memdesc:ab520e87e20fb655d2b46b12b795b082b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test który sprawdza, czy funkcja poprawnie przesortuje tablicę dodatnich wartości z duplikatami.  <br /></td></tr>
+<tr class="separator:ab520e87e20fb655d2b46b12b795b082b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6677aa72d9d623054d673248d8ccd6ed" id="r_a6677aa72d9d623054d673248d8ccd6ed"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6677aa72d9d623054d673248d8ccd6ed">TEST</a> (Sortowanie, SortowanieTablicyZUjemnymiDuplikatami)</td></tr>
+<tr class="memdesc:a6677aa72d9d623054d673248d8ccd6ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test który sprawdza, czy funkcja poprawnie przesortuje tablicę ujemnych wartości z duplikatami.  <br /></td></tr>
+<tr class="separator:a6677aa72d9d623054d673248d8ccd6ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7da031367575c574e767327c7f938770" id="r_a7da031367575c574e767327c7f938770"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7da031367575c574e767327c7f938770">TEST</a> (Sortowanie, SortowanieLosowejTablicyLiczb)</td></tr>
+<tr class="memdesc:a7da031367575c574e767327c7f938770"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test który sprawdza, czy funkcja poprawnie przesortuje tablicę dodatnich losowych wartości.  <br /></td></tr>
+<tr class="separator:a7da031367575c574e767327c7f938770"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a874829b2d4dbb53057fb756f6679d5d2" id="r_a874829b2d4dbb53057fb756f6679d5d2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a874829b2d4dbb53057fb756f6679d5d2">TEST</a> (Inicjalizacja, NieRzucaWyjatkiem)</td></tr>
+<tr class="memdesc:a874829b2d4dbb53057fb756f6679d5d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test który sprawdza, czy stworzenie pustej tablicy nie rzuci wyjątku.  <br /></td></tr>
+<tr class="separator:a874829b2d4dbb53057fb756f6679d5d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae82a712d4afbb2da5254d123d2b09565" id="r_ae82a712d4afbb2da5254d123d2b09565"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae82a712d4afbb2da5254d123d2b09565">TEST</a> (Sortowanie, SortowanieTablicyUjemnychDodatnichIDuplikatow)</td></tr>
+<tr class="memdesc:ae82a712d4afbb2da5254d123d2b09565"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test który sprawdza, czy funkcja poprawnie przesortuje tablicę wartości dodatnich, ujemnych z duplikatami.  <br /></td></tr>
+<tr class="separator:ae82a712d4afbb2da5254d123d2b09565"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a34c58f054946e60c3fbcb972b7d355e1" id="r_a34c58f054946e60c3fbcb972b7d355e1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a34c58f054946e60c3fbcb972b7d355e1">TEST</a> (Sortowanie, SortowanieTablicyDwaElementyRosnaco)</td></tr>
+<tr class="memdesc:a34c58f054946e60c3fbcb972b7d355e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test który sprawdza, czy funkcja poprawnie przesortuje tablicę dwuelementową rosnącą.  <br /></td></tr>
+<tr class="separator:a34c58f054946e60c3fbcb972b7d355e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2685b1c5dc4d3734703064b8d15636b" id="r_ab2685b1c5dc4d3734703064b8d15636b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab2685b1c5dc4d3734703064b8d15636b">TEST</a> (Sortowanie, SortowanieDuzejTablicyPonad100Elementow)</td></tr>
+<tr class="memdesc:ab2685b1c5dc4d3734703064b8d15636b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test który sprawdza, czy funkcja poprawnie przesortuje dużą tablicę dodatnich losowych wartości.  <br /></td></tr>
+<tr class="separator:ab2685b1c5dc4d3734703064b8d15636b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac47b41c3027da1567f91c00a7a8f7cbf" id="r_ac47b41c3027da1567f91c00a7a8f7cbf"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac47b41c3027da1567f91c00a7a8f7cbf">TEST</a> (Sortowanie, SortowanieDuzejTablicyPonad100ElementowUjemnychDodatnichDuplikatow)</td></tr>
+<tr class="memdesc:ac47b41c3027da1567f91c00a7a8f7cbf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test który sprawdza, czy funkcja poprawnie przesortuje dużą tablicę losowych wartości dodatnich, ujemnych i duplikatów.  <br /></td></tr>
+<tr class="separator:ac47b41c3027da1567f91c00a7a8f7cbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a936a65145031eb76fe56d6fb67e6962f" id="r_a936a65145031eb76fe56d6fb67e6962f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a936a65145031eb76fe56d6fb67e6962f">TEST</a> (Sortowanie, TablicaJednoelementowa)</td></tr>
+<tr class="memdesc:a936a65145031eb76fe56d6fb67e6962f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test który sprawdza, czy funkcja poprawnie przesortuje tablicę jednoelementową.  <br /></td></tr>
+<tr class="separator:a936a65145031eb76fe56d6fb67e6962f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Dokumentacja funkcji</h2>
+<a id="a874829b2d4dbb53057fb756f6679d5d2" name="a874829b2d4dbb53057fb756f6679d5d2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a874829b2d4dbb53057fb756f6679d5d2">&#9670;&#160;</a></span>TEST() <span class="overload">[1/14]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST </td>
+          <td>(</td>
+          <td class="paramtype">Inicjalizacja</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">NieRzucaWyjatkiem</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Test który sprawdza, czy stworzenie pustej tablicy nie rzuci wyjątku. </p>
+<p>Tablica <code>input</code> zawiera już posortowane wartości. Są to dane wejściowe.</p>
+<p>Zmienna <code>size</code> przechowuje wielkość tablicy.</p>
+<p>Do sprawdzenia rzucenia wyjątku, użyto makra <code>ASSERT_NO_THROW</code></p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Sortowanie</td><td></td></tr>
+    <tr><td class="paramname">TablicaNiezmieniona</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ab2685b1c5dc4d3734703064b8d15636b" name="ab2685b1c5dc4d3734703064b8d15636b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab2685b1c5dc4d3734703064b8d15636b">&#9670;&#160;</a></span>TEST() <span class="overload">[2/14]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST </td>
+          <td>(</td>
+          <td class="paramtype">Sortowanie</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">SortowanieDuzejTablicyPonad100Elementow</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Test który sprawdza, czy funkcja poprawnie przesortuje dużą tablicę dodatnich losowych wartości. </p>
+<p>Tablica <code>input</code> zawiera już posortowane wartości. Są to dane wejściowe.</p>
+<p>Zmienna <code>size</code> przechowuje wielkość tablicy.</p>
+<p>Aby wygenerować losowe wartości, użyto funkcji <code>rand()</code></p>
+<p><a class="el" href="class_merge_sort.html" title="Klasa MergeSort.">MergeSort</a> tworzy obiekt z tablicą <code>input</code> oraz obiektem <code>size</code>.</p>
+<p>Poprzez wywołanie <a class="el" href="class_merge_sort.html" title="Klasa MergeSort.">MergeSort</a> <a class="el" href="class_merge_sort.html#a7678aa9eb919740851247f4f1af211cd" title="Getter - Funkcja zwraca wskaźnik MergeSort::arr.">MergeSort::getArray()</a>, wskaźnik do <a class="el" href="class_merge_sort.html#a677b7f49b8d82aee2b3c28d403c6c455">MergeSort::arr</a> jest przekazany do zmiennej <code>tempArray</code>.</p>
+<p>Wywołanie <code>std::sort</code> na tablicy, aby przesortować podaną tablicę z biblioteki <code>cstdlib</code></p>
+<p>Pętla <code>for</code> porównuje makrem <code>EXPECT_EQ</code> wartości tablicy <code>inputArray</code> z tablicą <code>tempArray</code>.</p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Sortowanie</td><td></td></tr>
+    <tr><td class="paramname">TablicaNiezmieniona</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ac47b41c3027da1567f91c00a7a8f7cbf" name="ac47b41c3027da1567f91c00a7a8f7cbf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac47b41c3027da1567f91c00a7a8f7cbf">&#9670;&#160;</a></span>TEST() <span class="overload">[3/14]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST </td>
+          <td>(</td>
+          <td class="paramtype">Sortowanie</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">SortowanieDuzejTablicyPonad100ElementowUjemnychDodatnichDuplikatow</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Test który sprawdza, czy funkcja poprawnie przesortuje dużą tablicę losowych wartości dodatnich, ujemnych i duplikatów. </p>
+<p>Tablica <code>input</code> zawiera już posortowane wartości. Są to dane wejściowe.</p>
+<p>Zmienna <code>size</code> przechowuje wielkość tablicy.</p>
+<p>Aby wygenerować losowe wartości, użyto funkcji <code>rand()</code></p>
+<p><a class="el" href="class_merge_sort.html" title="Klasa MergeSort.">MergeSort</a> tworzy obiekt z tablicą <code>input</code> oraz obiektem <code>size</code>.</p>
+<p>Poprzez wywołanie <a class="el" href="class_merge_sort.html" title="Klasa MergeSort.">MergeSort</a> <a class="el" href="class_merge_sort.html#a7678aa9eb919740851247f4f1af211cd" title="Getter - Funkcja zwraca wskaźnik MergeSort::arr.">MergeSort::getArray()</a>, wskaźnik do <a class="el" href="class_merge_sort.html#a677b7f49b8d82aee2b3c28d403c6c455">MergeSort::arr</a> jest przekazany do zmiennej <code>tempArray</code>.</p>
+<p>Wywołanie <code>std::sort</code> na tablicy, aby przesortować podaną tablicę z biblioteki <code>cstdlib</code></p>
+<p>Pętla <code>for</code> porównuje makrem <code>EXPECT_EQ</code> wartości tablicy <code>inputArray</code> z tablicą <code>tempArray</code>.</p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Sortowanie</td><td></td></tr>
+    <tr><td class="paramname">TablicaNiezmieniona</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a7da031367575c574e767327c7f938770" name="a7da031367575c574e767327c7f938770"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7da031367575c574e767327c7f938770">&#9670;&#160;</a></span>TEST() <span class="overload">[4/14]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST </td>
+          <td>(</td>
+          <td class="paramtype">Sortowanie</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">SortowanieLosowejTablicyLiczb</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Test który sprawdza, czy funkcja poprawnie przesortuje tablicę dodatnich losowych wartości. </p>
+<p>Tablica <code>input</code> zawiera już posortowane wartości. Są to dane wejściowe.</p>
+<p>Zmienna <code>size</code> przechowuje wielkość tablicy.</p>
+<p>Aby wygenerować losowe wartości, użyto funkcji <code>rand()</code></p>
+<p><a class="el" href="class_merge_sort.html" title="Klasa MergeSort.">MergeSort</a> tworzy obiekt z tablicą <code>input</code> oraz obiektem <code>size</code>.</p>
+<p>Poprzez wywołanie <a class="el" href="class_merge_sort.html" title="Klasa MergeSort.">MergeSort</a> <a class="el" href="class_merge_sort.html#a7678aa9eb919740851247f4f1af211cd" title="Getter - Funkcja zwraca wskaźnik MergeSort::arr.">MergeSort::getArray()</a>, wskaźnik do <a class="el" href="class_merge_sort.html#a677b7f49b8d82aee2b3c28d403c6c455">MergeSort::arr</a> jest przekazany do zmiennej <code>tempArray</code>.</p>
+<p>Wywołanie <code>std::sort</code> na tablicy, aby przesortować podaną tablicę z biblioteki <code>cstdlib</code></p>
+<p>Pętla <code>for</code> porównuje makrem <code>EXPECT_EQ</code> wartości tablicy <code>inputArray</code> z tablicą <code>tempArray</code>.</p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Sortowanie</td><td></td></tr>
+    <tr><td class="paramname">TablicaNiezmieniona</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a34c58f054946e60c3fbcb972b7d355e1" name="a34c58f054946e60c3fbcb972b7d355e1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a34c58f054946e60c3fbcb972b7d355e1">&#9670;&#160;</a></span>TEST() <span class="overload">[5/14]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST </td>
+          <td>(</td>
+          <td class="paramtype">Sortowanie</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">SortowanieTablicyDwaElementyRosnaco</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Test który sprawdza, czy funkcja poprawnie przesortuje tablicę dwuelementową rosnącą. </p>
+<p>Tablica <code>input</code> zawiera już posortowane wartości. Są to dane wejściowe.</p>
+<p>Zmienna <code>size</code> przechowuje wielkość tablicy.</p>
+<p><a class="el" href="class_merge_sort.html" title="Klasa MergeSort.">MergeSort</a> tworzy obiekt z tablicą <code>input</code> oraz obiektem <code>size</code>.</p>
+<p>Poprzez wywołanie <a class="el" href="class_merge_sort.html" title="Klasa MergeSort.">MergeSort</a> <a class="el" href="class_merge_sort.html#a7678aa9eb919740851247f4f1af211cd" title="Getter - Funkcja zwraca wskaźnik MergeSort::arr.">MergeSort::getArray()</a>, wskaźnik do <a class="el" href="class_merge_sort.html#a677b7f49b8d82aee2b3c28d403c6c455">MergeSort::arr</a> jest przekazany do zmiennej <code>tempArray</code>.</p>
+<p>Wywołanie <code>std::sort</code> na tablicy, aby przesortować podaną tablicę z biblioteki <code>cstdlib</code></p>
+<p>Pętla <code>for</code> porównuje makrem <code>EXPECT_EQ</code> wartości tablicy <code>inputArray</code> z tablicą <code>tempArray</code>.</p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Sortowanie</td><td></td></tr>
+    <tr><td class="paramname">TablicaNiezmieniona</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a065cebb812a474033c5eccfaddb3152f" name="a065cebb812a474033c5eccfaddb3152f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a065cebb812a474033c5eccfaddb3152f">&#9670;&#160;</a></span>TEST() <span class="overload">[6/14]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST </td>
+          <td>(</td>
+          <td class="paramtype">Sortowanie</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">SortowanieTablicyOdwrotnejKolejnosci</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Test który sprawdza, czy funkcja poprawnie przesortuje tablicę podaną w odwrotnej kolejności. </p>
+<p>Tablica <code>input</code> zawiera już posortowane wartości. Są to dane wejściowe.</p>
+<p>Zmienna <code>size</code> przechowuje wielkość tablicy.</p>
+<p><a class="el" href="class_merge_sort.html" title="Klasa MergeSort.">MergeSort</a> tworzy obiekt z tablicą <code>input</code> oraz obiektem <code>size</code>.</p>
+<p>Poprzez wywołanie <a class="el" href="class_merge_sort.html" title="Klasa MergeSort.">MergeSort</a> <a class="el" href="class_merge_sort.html#a7678aa9eb919740851247f4f1af211cd" title="Getter - Funkcja zwraca wskaźnik MergeSort::arr.">MergeSort::getArray()</a>, wskaźnik do <a class="el" href="class_merge_sort.html#a677b7f49b8d82aee2b3c28d403c6c455">MergeSort::arr</a> jest przekazany do zmiennej <code>tempArray</code>.</p>
+<p>Wywołanie <code>std::sort</code> na tablicy, aby przesortować podaną tablicę z biblioteki <code>cstdlib</code></p>
+<p>Pętla <code>for</code> porównuje makrem <code>EXPECT_EQ</code> wartości tablicy <code>inputArray</code> z tablicą <code>tempArray</code>.</p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Sortowanie</td><td></td></tr>
+    <tr><td class="paramname">TablicaNiezmieniona</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ae82a712d4afbb2da5254d123d2b09565" name="ae82a712d4afbb2da5254d123d2b09565"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae82a712d4afbb2da5254d123d2b09565">&#9670;&#160;</a></span>TEST() <span class="overload">[7/14]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST </td>
+          <td>(</td>
+          <td class="paramtype">Sortowanie</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">SortowanieTablicyUjemnychDodatnichIDuplikatow</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Test który sprawdza, czy funkcja poprawnie przesortuje tablicę wartości dodatnich, ujemnych z duplikatami. </p>
+<p>Tablica <code>input</code> zawiera już posortowane wartości. Są to dane wejściowe.</p>
+<p>Zmienna <code>size</code> przechowuje wielkość tablicy.</p>
+<p><a class="el" href="class_merge_sort.html" title="Klasa MergeSort.">MergeSort</a> tworzy obiekt z tablicą <code>input</code> oraz obiektem <code>size</code>.</p>
+<p>Poprzez wywołanie <a class="el" href="class_merge_sort.html" title="Klasa MergeSort.">MergeSort</a> <a class="el" href="class_merge_sort.html#a7678aa9eb919740851247f4f1af211cd" title="Getter - Funkcja zwraca wskaźnik MergeSort::arr.">MergeSort::getArray()</a>, wskaźnik do <a class="el" href="class_merge_sort.html#a677b7f49b8d82aee2b3c28d403c6c455">MergeSort::arr</a> jest przekazany do zmiennej <code>tempArray</code>.</p>
+<p>Wywołanie <code>std::sort</code> na tablicy, aby przesortować podaną tablicę z biblioteki <code>cstdlib</code></p>
+<p>Pętla <code>for</code> porównuje makrem <code>EXPECT_EQ</code> wartości tablicy <code>inputArray</code> z tablicą <code>tempArray</code>.</p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Sortowanie</td><td></td></tr>
+    <tr><td class="paramname">TablicaNiezmieniona</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a50a7a6985417cab655727d66906fc85a" name="a50a7a6985417cab655727d66906fc85a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a50a7a6985417cab655727d66906fc85a">&#9670;&#160;</a></span>TEST() <span class="overload">[8/14]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST </td>
+          <td>(</td>
+          <td class="paramtype">Sortowanie</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">SortowanieTablicyUjemnychIDodatnichWartosci</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Test który sprawdza, czy funkcja poprawnie przesortuje tablicę ujemnych i dodatnich wartości. </p>
+<p>Tablica <code>input</code> zawiera już posortowane wartości. Są to dane wejściowe.</p>
+<p>Zmienna <code>size</code> przechowuje wielkość tablicy.</p>
+<p><a class="el" href="class_merge_sort.html" title="Klasa MergeSort.">MergeSort</a> tworzy obiekt z tablicą <code>input</code> oraz obiektem <code>size</code>.</p>
+<p>Poprzez wywołanie <a class="el" href="class_merge_sort.html" title="Klasa MergeSort.">MergeSort</a> <a class="el" href="class_merge_sort.html#a7678aa9eb919740851247f4f1af211cd" title="Getter - Funkcja zwraca wskaźnik MergeSort::arr.">MergeSort::getArray()</a>, wskaźnik do <a class="el" href="class_merge_sort.html#a677b7f49b8d82aee2b3c28d403c6c455">MergeSort::arr</a> jest przekazany do zmiennej <code>tempArray</code>.</p>
+<p>Wywołanie <code>std::sort</code> na tablicy, aby przesortować podaną tablicę z biblioteki <code>cstdlib</code></p>
+<p>Pętla <code>for</code> porównuje makrem <code>EXPECT_EQ</code> wartości tablicy <code>inputArray</code> z tablicą <code>tempArray</code>.</p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Sortowanie</td><td></td></tr>
+    <tr><td class="paramname">TablicaNiezmieniona</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a3d4154d2944f39c12cda125ce22304f7" name="a3d4154d2944f39c12cda125ce22304f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3d4154d2944f39c12cda125ce22304f7">&#9670;&#160;</a></span>TEST() <span class="overload">[9/14]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST </td>
+          <td>(</td>
+          <td class="paramtype">Sortowanie</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">SortowanieTablicyUjemnychWartosci</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Test który sprawdza, czy funkcja poprawnie przesortuje tablicę ujemnych wartości. </p>
+<p>Tablica <code>input</code> zawiera już posortowane wartości. Są to dane wejściowe.</p>
+<p>Zmienna <code>size</code> przechowuje wielkość tablicy.</p>
+<p><a class="el" href="class_merge_sort.html" title="Klasa MergeSort.">MergeSort</a> tworzy obiekt z tablicą <code>input</code> oraz obiektem <code>size</code>.</p>
+<p>Poprzez wywołanie <a class="el" href="class_merge_sort.html" title="Klasa MergeSort.">MergeSort</a> <a class="el" href="class_merge_sort.html#a7678aa9eb919740851247f4f1af211cd" title="Getter - Funkcja zwraca wskaźnik MergeSort::arr.">MergeSort::getArray()</a>, wskaźnik do <a class="el" href="class_merge_sort.html#a677b7f49b8d82aee2b3c28d403c6c455">MergeSort::arr</a> jest przekazany do zmiennej <code>tempArray</code>.</p>
+<p>Wywołanie <code>std::sort</code> na tablicy, aby przesortować podaną tablicę z biblioteki <code>cstdlib</code></p>
+<p>Pętla <code>for</code> porównuje makrem <code>EXPECT_EQ</code> wartości tablicy <code>inputArray</code> z tablicą <code>tempArray</code>.</p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Sortowanie</td><td></td></tr>
+    <tr><td class="paramname">TablicaNiezmieniona</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ab520e87e20fb655d2b46b12b795b082b" name="ab520e87e20fb655d2b46b12b795b082b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab520e87e20fb655d2b46b12b795b082b">&#9670;&#160;</a></span>TEST() <span class="overload">[10/14]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST </td>
+          <td>(</td>
+          <td class="paramtype">Sortowanie</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">SortowanieTablicyZDuplikatami</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Test który sprawdza, czy funkcja poprawnie przesortuje tablicę dodatnich wartości z duplikatami. </p>
+<p>Tablica <code>input</code> zawiera już posortowane wartości. Są to dane wejściowe.</p>
+<p>Zmienna <code>size</code> przechowuje wielkość tablicy.</p>
+<p><a class="el" href="class_merge_sort.html" title="Klasa MergeSort.">MergeSort</a> tworzy obiekt z tablicą <code>input</code> oraz obiektem <code>size</code>.</p>
+<p>Poprzez wywołanie <a class="el" href="class_merge_sort.html" title="Klasa MergeSort.">MergeSort</a> <a class="el" href="class_merge_sort.html#a7678aa9eb919740851247f4f1af211cd" title="Getter - Funkcja zwraca wskaźnik MergeSort::arr.">MergeSort::getArray()</a>, wskaźnik do <a class="el" href="class_merge_sort.html#a677b7f49b8d82aee2b3c28d403c6c455">MergeSort::arr</a> jest przekazany do zmiennej <code>tempArray</code>.</p>
+<p>Wywołanie <code>std::sort</code> na tablicy, aby przesortować podaną tablicę z biblioteki <code>cstdlib</code></p>
+<p>Pętla <code>for</code> porównuje makrem <code>EXPECT_EQ</code> wartości tablicy <code>inputArray</code> z tablicą <code>tempArray</code>.</p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Sortowanie</td><td></td></tr>
+    <tr><td class="paramname">TablicaNiezmieniona</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a6677aa72d9d623054d673248d8ccd6ed" name="a6677aa72d9d623054d673248d8ccd6ed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6677aa72d9d623054d673248d8ccd6ed">&#9670;&#160;</a></span>TEST() <span class="overload">[11/14]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST </td>
+          <td>(</td>
+          <td class="paramtype">Sortowanie</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">SortowanieTablicyZUjemnymiDuplikatami</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Test który sprawdza, czy funkcja poprawnie przesortuje tablicę ujemnych wartości z duplikatami. </p>
+<p>Tablica <code>input</code> zawiera już posortowane wartości. Są to dane wejściowe.</p>
+<p>Zmienna <code>size</code> przechowuje wielkość tablicy.</p>
+<p><a class="el" href="class_merge_sort.html" title="Klasa MergeSort.">MergeSort</a> tworzy obiekt z tablicą <code>input</code> oraz obiektem <code>size</code>.</p>
+<p>Poprzez wywołanie <a class="el" href="class_merge_sort.html" title="Klasa MergeSort.">MergeSort</a> <a class="el" href="class_merge_sort.html#a7678aa9eb919740851247f4f1af211cd" title="Getter - Funkcja zwraca wskaźnik MergeSort::arr.">MergeSort::getArray()</a>, wskaźnik do <a class="el" href="class_merge_sort.html#a677b7f49b8d82aee2b3c28d403c6c455">MergeSort::arr</a> jest przekazany do zmiennej <code>tempArray</code>.</p>
+<p>Wywołanie <code>std::sort</code> na tablicy, aby przesortować podaną tablicę z biblioteki <code>cstdlib</code></p>
+<p>Pętla <code>for</code> porównuje makrem <code>EXPECT_EQ</code> wartości tablicy <code>inputArray</code> z tablicą <code>tempArray</code>.</p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Sortowanie</td><td></td></tr>
+    <tr><td class="paramname">TablicaNiezmieniona</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a936a65145031eb76fe56d6fb67e6962f" name="a936a65145031eb76fe56d6fb67e6962f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a936a65145031eb76fe56d6fb67e6962f">&#9670;&#160;</a></span>TEST() <span class="overload">[12/14]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST </td>
+          <td>(</td>
+          <td class="paramtype">Sortowanie</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">TablicaJednoelementowa</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Test który sprawdza, czy funkcja poprawnie przesortuje tablicę jednoelementową. </p>
+<p>Tablica <code>input</code> zawiera już posortowane wartości. Są to dane wejściowe.</p>
+<p>Zmienna <code>size</code> przechowuje wielkość tablicy.</p>
+<p><a class="el" href="class_merge_sort.html" title="Klasa MergeSort.">MergeSort</a> tworzy obiekt z tablicą <code>input</code> oraz obiektem <code>size</code>.</p>
+<p>Poprzez wywołanie <a class="el" href="class_merge_sort.html" title="Klasa MergeSort.">MergeSort</a> <a class="el" href="class_merge_sort.html#a7678aa9eb919740851247f4f1af211cd" title="Getter - Funkcja zwraca wskaźnik MergeSort::arr.">MergeSort::getArray()</a>, wskaźnik do <a class="el" href="class_merge_sort.html#a677b7f49b8d82aee2b3c28d403c6c455">MergeSort::arr</a> jest przekazany do zmiennej <code>tempArray</code>.</p>
+<p>Wywołanie <code>std::sort</code> na tablicy, aby przesortować podaną tablicę z biblioteki <code>cstdlib</code></p>
+<p>Pętla <code>for</code> porównuje makrem <code>EXPECT_EQ</code> wartości tablicy <code>inputArray</code> z tablicą <code>tempArray</code>.</p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Sortowanie</td><td></td></tr>
+    <tr><td class="paramname">TablicaNiezmieniona</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aeb63d86021126b60561cf04ad61691cf" name="aeb63d86021126b60561cf04ad61691cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeb63d86021126b60561cf04ad61691cf">&#9670;&#160;</a></span>TEST() <span class="overload">[13/14]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST </td>
+          <td>(</td>
+          <td class="paramtype">Sortowanie</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">TablicaNiezmieniona</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Test który sprawdza, czy funkcja zachowuje tablicę niezmienioną, gdy ona jest już posortowana rosnąco. </p>
+<p>Tablica <code>input</code> zawiera już posortowane wartości. Są to dane wejściowe.</p>
+<p>Zmienna <code>size</code> przechowuje wielkość tablicy.</p>
+<p><a class="el" href="class_merge_sort.html" title="Klasa MergeSort.">MergeSort</a> tworzy obiekt z tablicą <code>input</code> oraz obiektem <code>size</code>.</p>
+<p>Poprzez wywołanie <a class="el" href="class_merge_sort.html" title="Klasa MergeSort.">MergeSort</a> <a class="el" href="class_merge_sort.html#a7678aa9eb919740851247f4f1af211cd" title="Getter - Funkcja zwraca wskaźnik MergeSort::arr.">MergeSort::getArray()</a>, wskaźnik do <a class="el" href="class_merge_sort.html#a677b7f49b8d82aee2b3c28d403c6c455">MergeSort::arr</a> jest przekazany do zmiennej <code>tempArray</code>.</p>
+<p>Pętla <code>for</code> porównuje makrem <code>EXPECT_EQ</code> wartości tablicy <code>inputArray</code> z tablicą <code>tempArray</code>.</p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Sortowanie</td><td></td></tr>
+    <tr><td class="paramname">TablicaNiezmieniona</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a87b54bad20017e2bd24c706b607333d3" name="a87b54bad20017e2bd24c706b607333d3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a87b54bad20017e2bd24c706b607333d3">&#9670;&#160;</a></span>TEST() <span class="overload">[14/14]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST </td>
+          <td>(</td>
+          <td class="paramtype">Sortowanie</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">TablicaNiezmienionaFail</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Test który sprawdza, czy test poprawnie zrobi fail, gdy ręcznie ustawimy inną wartość. </p>
+<p>Tablica <code>input</code> zawiera już posortowane wartości. Są to dane wejściowe.</p>
+<p>Zmienna <code>size</code> przechowuje wielkość tablicy.</p>
+<p><a class="el" href="class_merge_sort.html" title="Klasa MergeSort.">MergeSort</a> tworzy obiekt z tablicą <code>input</code> oraz obiektem <code>size</code>.</p>
+<p>Poprzez wywołanie <a class="el" href="class_merge_sort.html" title="Klasa MergeSort.">MergeSort</a> <a class="el" href="class_merge_sort.html#a7678aa9eb919740851247f4f1af211cd" title="Getter - Funkcja zwraca wskaźnik MergeSort::arr.">MergeSort::getArray()</a>, wskaźnik do <a class="el" href="class_merge_sort.html#a677b7f49b8d82aee2b3c28d403c6c455">MergeSort::arr</a> jest przekazany do zmiennej <code>tempArray</code>.</p>
+<p>Ręcznia zmiana wartości indeksu 0: <code>tempArray[0] = 999;</code></p>
+<p>Pętla <code>for</code> porównuje makrem <code>EXPECT_EQ</code> wartości tablicy <code>inputArray</code> z tablicą <code>tempArray</code>.</p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Sortowanie</td><td></td></tr>
+    <tr><td class="paramname">TablicaNiezmieniona</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Wygenerowano za pomocą&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

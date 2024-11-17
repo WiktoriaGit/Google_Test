@@ -1,0 +1,121 @@
+\doxysection{Merge\+Sort.\+cpp}
+\hypertarget{_merge_sort_8cpp_source}{}\label{_merge_sort_8cpp_source}\index{MergeSort/MergeSort.cpp@{MergeSort/MergeSort.cpp}}
+\mbox{\hyperlink{_merge_sort_8cpp}{Idź do dokumentacji tego pliku.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_merge_sort_8h}{MergeSort.h}}"{}}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00011\ \mbox{\hyperlink{class_merge_sort_a55ae6cf0736f402fc4f0db2d9326a641}{MergeSort::MergeSort}}()}
+\DoxyCodeLine{00012\ \{}
+\DoxyCodeLine{00013\ \ \ \ \ this-\/>\mbox{\hyperlink{class_merge_sort_a4fa726789d196e248d09f2873ac694df}{size}}\ =\ 0;}
+\DoxyCodeLine{00014\ \ \ \ \ this-\/>\mbox{\hyperlink{class_merge_sort_a677b7f49b8d82aee2b3c28d403c6c455}{arr}}\ =\ \textcolor{keyword}{new}\ \textcolor{keywordtype}{int}[this-\/>\mbox{\hyperlink{class_merge_sort_a4fa726789d196e248d09f2873ac694df}{size}}];}
+\DoxyCodeLine{00015\ \}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00025\ \mbox{\hyperlink{class_merge_sort_a55ae6cf0736f402fc4f0db2d9326a641}{MergeSort::MergeSort}}(\textcolor{keywordtype}{int}\ input[],\ \textcolor{keywordtype}{int}\ size)}
+\DoxyCodeLine{00026\ \{}
+\DoxyCodeLine{00027\ \ \ \ \ this-\/>size\ =\ \mbox{\hyperlink{class_merge_sort_a4fa726789d196e248d09f2873ac694df}{size}};}
+\DoxyCodeLine{00028\ \ \ \ \ this-\/>\mbox{\hyperlink{class_merge_sort_a677b7f49b8d82aee2b3c28d403c6c455}{arr}}\ =\ \textcolor{keyword}{new}\ \textcolor{keywordtype}{int}[\mbox{\hyperlink{class_merge_sort_a4fa726789d196e248d09f2873ac694df}{size}}];}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \ \ \ \ this-\/>\mbox{\hyperlink{class_merge_sort_a6846261a7c518e5f381508f97e9b3166}{setArray}}(input,\ this-\/>size);}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \ \ \ \ this-\/>\mbox{\hyperlink{class_merge_sort_a230ef88c5677f3e0fe7ad4aba5acae96}{sort}}();}
+\DoxyCodeLine{00033\ \}}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00038\ \mbox{\hyperlink{class_merge_sort_a7140fd17b17558d9810c8e791c353909}{MergeSort::\string~MergeSort}}()}
+\DoxyCodeLine{00039\ \{}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keyword}{delete}[]\ \mbox{\hyperlink{class_merge_sort_a677b7f49b8d82aee2b3c28d403c6c455}{arr}};}
+\DoxyCodeLine{00041\ \}}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00046\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_merge_sort_ac2ff00999ac7a413df843cdf51e4db3e}{MergeSort::printArray}}()}
+\DoxyCodeLine{00047\ \{}
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ this-\/>\mbox{\hyperlink{class_merge_sort_a4fa726789d196e248d09f2873ac694df}{size}};\ i++)\ \{}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ std::cout\ <<\ this-\/>\mbox{\hyperlink{class_merge_sort_a677b7f49b8d82aee2b3c28d403c6c455}{arr}}[i]\ <<\ \textcolor{stringliteral}{"{}\ "{}};}
+\DoxyCodeLine{00050\ \ \ \ \ \}}
+\DoxyCodeLine{00051\ \ \ \ \ std::cout\ <<\ std::endl;}
+\DoxyCodeLine{00052\ \}}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00057\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_merge_sort_a6846261a7c518e5f381508f97e9b3166}{MergeSort::setArray}}(\textcolor{keywordtype}{int}\ input[],\ \textcolor{keywordtype}{int}\ inputSize)}
+\DoxyCodeLine{00058\ \{}
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ inputSize;\ i++)\ \{}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{class_merge_sort_a677b7f49b8d82aee2b3c28d403c6c455}{arr}}[i]\ =\ input[i];}
+\DoxyCodeLine{00061\ \ \ \ \ \}}
+\DoxyCodeLine{00062\ \}}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00069\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_merge_sort_a230ef88c5677f3e0fe7ad4aba5acae96}{MergeSort::sort}}()}
+\DoxyCodeLine{00070\ \{}
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_merge_sort_a4fa726789d196e248d09f2873ac694df}{size}}\ <=\ 1)\ }
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00074\ \ \ \ \ \mbox{\hyperlink{class_merge_sort_a167f7ca0cc6029d238b4845c10a28f43}{mergeSort}}(\mbox{\hyperlink{class_merge_sort_a677b7f49b8d82aee2b3c28d403c6c455}{arr}},\ 0,\ \mbox{\hyperlink{class_merge_sort_a4fa726789d196e248d09f2873ac694df}{size}}\ -\/\ 1);}
+\DoxyCodeLine{00075\ \}}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00080\ \textcolor{keywordtype}{int}*\ \mbox{\hyperlink{class_merge_sort_a7678aa9eb919740851247f4f1af211cd}{MergeSort::getArray}}()}
+\DoxyCodeLine{00081\ \{}
+\DoxyCodeLine{00082\ \ \ \ \ \textcolor{keywordflow}{return}\ this-\/>\mbox{\hyperlink{class_merge_sort_a677b7f49b8d82aee2b3c28d403c6c455}{arr}};}
+\DoxyCodeLine{00083\ \}}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00090\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_merge_sort_a167f7ca0cc6029d238b4845c10a28f43}{MergeSort::mergeSort}}(\textcolor{keywordtype}{int}*\ arr,\ \textcolor{keywordtype}{int}\ left,\ \textcolor{keywordtype}{int}\ right)}
+\DoxyCodeLine{00091\ \{}
+\DoxyCodeLine{00092\ \ \ \ \ \textcolor{keywordflow}{if}\ (left\ <\ right)\ \{}
+\DoxyCodeLine{00093\ }
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ mid\ =\ left\ +\ (right\ -\/\ left)\ /\ 2;}
+\DoxyCodeLine{00095\ }
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_merge_sort_a167f7ca0cc6029d238b4845c10a28f43}{mergeSort}}(\mbox{\hyperlink{class_merge_sort_a677b7f49b8d82aee2b3c28d403c6c455}{arr}},\ left,\ mid);}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_merge_sort_a167f7ca0cc6029d238b4845c10a28f43}{mergeSort}}(\mbox{\hyperlink{class_merge_sort_a677b7f49b8d82aee2b3c28d403c6c455}{arr}},\ mid\ +\ 1,\ right);}
+\DoxyCodeLine{00098\ }
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_merge_sort_a62c18a3fe407846974b36b89faaf72d5}{merge}}(\mbox{\hyperlink{class_merge_sort_a677b7f49b8d82aee2b3c28d403c6c455}{arr}},\ left,\ mid,\ right);}
+\DoxyCodeLine{00100\ \ \ \ \ \}}
+\DoxyCodeLine{00101\ \}}
+\DoxyCodeLine{00102\ }
+\DoxyCodeLine{00114\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_merge_sort_a62c18a3fe407846974b36b89faaf72d5}{MergeSort::merge}}(\textcolor{keywordtype}{int}*\ arr,\ \textcolor{keywordtype}{int}\ left,\ \textcolor{keywordtype}{int}\ mid,\ \textcolor{keywordtype}{int}\ right)}
+\DoxyCodeLine{00115\ \{}
+\DoxyCodeLine{00116\ \ \ \ \ \textcolor{keywordtype}{int}\ n1\ =\ mid\ -\/\ left\ +\ 1;}
+\DoxyCodeLine{00117\ \ \ \ \ \textcolor{keywordtype}{int}\ n2\ =\ right\ -\/\ mid;}
+\DoxyCodeLine{00118\ }
+\DoxyCodeLine{00119\ \ \ \ \ \textcolor{keywordtype}{int}*\ leftArr\ =\ \textcolor{keyword}{new}\ \textcolor{keywordtype}{int}[n1];}
+\DoxyCodeLine{00120\ \ \ \ \ \textcolor{keywordtype}{int}*\ rightArr\ =\ \textcolor{keyword}{new}\ \textcolor{keywordtype}{int}[n2];}
+\DoxyCodeLine{00121\ }
+\DoxyCodeLine{00122\ }
+\DoxyCodeLine{00123\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ n1;\ i++)}
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ leftArr[i]\ =\ \mbox{\hyperlink{class_merge_sort_a677b7f49b8d82aee2b3c28d403c6c455}{arr}}[left\ +\ i];}
+\DoxyCodeLine{00125\ }
+\DoxyCodeLine{00126\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ n2;\ j++)}
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ rightArr[j]\ =\ \mbox{\hyperlink{class_merge_sort_a677b7f49b8d82aee2b3c28d403c6c455}{arr}}[mid\ +\ 1\ +\ j];}
+\DoxyCodeLine{00128\ }
+\DoxyCodeLine{00129\ }
+\DoxyCodeLine{00130\ \ \ \ \ \textcolor{keywordtype}{int}\ i\ =\ 0,\ j\ =\ 0,\ k\ =\ left;}
+\DoxyCodeLine{00131\ \ \ \ \ \textcolor{keywordflow}{while}\ (i\ <\ n1\ \&\&\ j\ <\ n2)\ \{}
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (leftArr[i]\ <=\ rightArr[j])\ \{}
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_merge_sort_a677b7f49b8d82aee2b3c28d403c6c455}{arr}}[k]\ =\ leftArr[i];}
+\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ \ \ \ \ i++;}
+\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00137\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_merge_sort_a677b7f49b8d82aee2b3c28d403c6c455}{arr}}[k]\ =\ rightArr[j];}
+\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ \ \ \ \ j++;}
+\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00140\ \ \ \ \ \ \ \ \ k++;}
+\DoxyCodeLine{00141\ \ \ \ \ \}}
+\DoxyCodeLine{00142\ }
+\DoxyCodeLine{00143\ \ \ \ \ \textcolor{keywordflow}{while}\ (i\ <\ n1)\ \{}
+\DoxyCodeLine{00144\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_merge_sort_a677b7f49b8d82aee2b3c28d403c6c455}{arr}}[k]\ =\ leftArr[i];}
+\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ i++;}
+\DoxyCodeLine{00146\ \ \ \ \ \ \ \ \ k++;}
+\DoxyCodeLine{00147\ \ \ \ \ \}}
+\DoxyCodeLine{00148\ }
+\DoxyCodeLine{00149\ \ \ \ \ \textcolor{keywordflow}{while}\ (j\ <\ n2)\ \{}
+\DoxyCodeLine{00150\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_merge_sort_a677b7f49b8d82aee2b3c28d403c6c455}{arr}}[k]\ =\ rightArr[j];}
+\DoxyCodeLine{00151\ \ \ \ \ \ \ \ \ j++;}
+\DoxyCodeLine{00152\ \ \ \ \ \ \ \ \ k++;}
+\DoxyCodeLine{00153\ \ \ \ \ \}}
+\DoxyCodeLine{00154\ }
+\DoxyCodeLine{00155\ \ \ \ \ \textcolor{keyword}{delete}[]\ leftArr;}
+\DoxyCodeLine{00156\ \ \ \ \ \textcolor{keyword}{delete}[]\ rightArr;}
+\DoxyCodeLine{00157\ \}}
+\DoxyCodeLine{00158\ }
+\DoxyCodeLine{00159\ \textcolor{keywordtype}{int}*\ \mbox{\hyperlink{class_merge_sort_a7678aa9eb919740851247f4f1af211cd}{MergeSort::getArray}}()}
+\DoxyCodeLine{00160\ \{}
+\DoxyCodeLine{00161\ \ \ \ \ \textcolor{keywordflow}{return}\ this-\/>\mbox{\hyperlink{class_merge_sort_a677b7f49b8d82aee2b3c28d403c6c455}{arr}};}
+\DoxyCodeLine{00162\ \}}
+
+\end{DoxyCode}

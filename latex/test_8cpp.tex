@@ -1,0 +1,445 @@
+\doxysection{Dokumentacja pliku GTest/test.cpp}
+\hypertarget{test_8cpp}{}\label{test_8cpp}\index{GTest/test.cpp@{GTest/test.cpp}}
+{\ttfamily \#include "{}pch.\+h"{}}\newline
+{\ttfamily \#include "{}../\+Merge\+Sort/\+Merge\+Sort.\+h"{}}\newline
+{\ttfamily \#include "{}../\+Merge\+Sort/\+Merge\+Sort.\+cpp"{}}\newline
+{\ttfamily \#include $<$algorithm$>$}\newline
+{\ttfamily \#include $<$cstdlib$>$}\newline
+\doxysubsubsection*{Funkcje}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{test_8cpp_aeb63d86021126b60561cf04ad61691cf}{TEST}} (Sortowanie, Tablica\+Niezmieniona)
+\begin{DoxyCompactList}\small\item\em Test który sprawdza, czy funkcja zachowuje tablicę niezmienioną, gdy ona jest już posortowana rosnąco. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{test_8cpp_a87b54bad20017e2bd24c706b607333d3}{TEST}} (Sortowanie, Tablica\+Niezmieniona\+Fail)
+\begin{DoxyCompactList}\small\item\em Test który sprawdza, czy test poprawnie zrobi fail, gdy ręcznie ustawimy inną wartość. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{test_8cpp_a065cebb812a474033c5eccfaddb3152f}{TEST}} (Sortowanie, Sortowanie\+Tablicy\+Odwrotnej\+Kolejnosci)
+\begin{DoxyCompactList}\small\item\em Test który sprawdza, czy funkcja poprawnie przesortuje tablicę podaną w odwrotnej kolejności. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{test_8cpp_a3d4154d2944f39c12cda125ce22304f7}{TEST}} (Sortowanie, Sortowanie\+Tablicy\+Ujemnych\+Wartosci)
+\begin{DoxyCompactList}\small\item\em Test który sprawdza, czy funkcja poprawnie przesortuje tablicę ujemnych wartości. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{test_8cpp_a50a7a6985417cab655727d66906fc85a}{TEST}} (Sortowanie, Sortowanie\+Tablicy\+Ujemnych\+IDodatnich\+Wartosci)
+\begin{DoxyCompactList}\small\item\em Test który sprawdza, czy funkcja poprawnie przesortuje tablicę ujemnych i dodatnich wartości. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{test_8cpp_ab520e87e20fb655d2b46b12b795b082b}{TEST}} (Sortowanie, Sortowanie\+Tablicy\+ZDuplikatami)
+\begin{DoxyCompactList}\small\item\em Test który sprawdza, czy funkcja poprawnie przesortuje tablicę dodatnich wartości z duplikatami. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{test_8cpp_a6677aa72d9d623054d673248d8ccd6ed}{TEST}} (Sortowanie, Sortowanie\+Tablicy\+ZUjemnymi\+Duplikatami)
+\begin{DoxyCompactList}\small\item\em Test który sprawdza, czy funkcja poprawnie przesortuje tablicę ujemnych wartości z duplikatami. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{test_8cpp_a7da031367575c574e767327c7f938770}{TEST}} (Sortowanie, Sortowanie\+Losowej\+Tablicy\+Liczb)
+\begin{DoxyCompactList}\small\item\em Test który sprawdza, czy funkcja poprawnie przesortuje tablicę dodatnich losowych wartości. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{test_8cpp_a874829b2d4dbb53057fb756f6679d5d2}{TEST}} (Inicjalizacja, Nie\+Rzuca\+Wyjatkiem)
+\begin{DoxyCompactList}\small\item\em Test który sprawdza, czy stworzenie pustej tablicy nie rzuci wyjątku. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{test_8cpp_ae82a712d4afbb2da5254d123d2b09565}{TEST}} (Sortowanie, Sortowanie\+Tablicy\+Ujemnych\+Dodatnich\+IDuplikatow)
+\begin{DoxyCompactList}\small\item\em Test który sprawdza, czy funkcja poprawnie przesortuje tablicę wartości dodatnich, ujemnych z duplikatami. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{test_8cpp_a34c58f054946e60c3fbcb972b7d355e1}{TEST}} (Sortowanie, Sortowanie\+Tablicy\+Dwa\+Elementy\+Rosnaco)
+\begin{DoxyCompactList}\small\item\em Test który sprawdza, czy funkcja poprawnie przesortuje tablicę dwuelementową rosnącą. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{test_8cpp_ab2685b1c5dc4d3734703064b8d15636b}{TEST}} (Sortowanie, Sortowanie\+Duzej\+Tablicy\+Ponad100\+Elementow)
+\begin{DoxyCompactList}\small\item\em Test który sprawdza, czy funkcja poprawnie przesortuje dużą tablicę dodatnich losowych wartości. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{test_8cpp_ac47b41c3027da1567f91c00a7a8f7cbf}{TEST}} (Sortowanie, Sortowanie\+Duzej\+Tablicy\+Ponad100\+Elementow\+Ujemnych\+Dodatnich\+Duplikatow)
+\begin{DoxyCompactList}\small\item\em Test który sprawdza, czy funkcja poprawnie przesortuje dużą tablicę losowych wartości dodatnich, ujemnych i duplikatów. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{test_8cpp_a936a65145031eb76fe56d6fb67e6962f}{TEST}} (Sortowanie, Tablica\+Jednoelementowa)
+\begin{DoxyCompactList}\small\item\em Test który sprawdza, czy funkcja poprawnie przesortuje tablicę jednoelementową. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Dokumentacja funkcji}
+\Hypertarget{test_8cpp_a874829b2d4dbb53057fb756f6679d5d2}\index{test.cpp@{test.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test.cpp@{test.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [1/14]}}
+{\footnotesize\ttfamily \label{test_8cpp_a874829b2d4dbb53057fb756f6679d5d2} 
+TEST (\begin{DoxyParamCaption}\item[{Inicjalizacja}]{}{, }\item[{Nie\+Rzuca\+Wyjatkiem}]{}{}\end{DoxyParamCaption})}
+
+
+
+Test który sprawdza, czy stworzenie pustej tablicy nie rzuci wyjątku. 
+
+Tablica {\ttfamily input} zawiera już posortowane wartości. Są to dane wejściowe.
+
+Zmienna {\ttfamily size} przechowuje wielkość tablicy.
+
+Do sprawdzenia rzucenia wyjątku, użyto makra {\ttfamily ASSERT\+\_\+\+NO\+\_\+\+THROW}
+
+
+\begin{DoxyParams}{Parametry}
+{\em Sortowanie} & \\
+\hline
+{\em Tablica\+Niezmieniona} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{test_8cpp_ab2685b1c5dc4d3734703064b8d15636b}\index{test.cpp@{test.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test.cpp@{test.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [2/14]}}
+{\footnotesize\ttfamily \label{test_8cpp_ab2685b1c5dc4d3734703064b8d15636b} 
+TEST (\begin{DoxyParamCaption}\item[{Sortowanie}]{}{, }\item[{Sortowanie\+Duzej\+Tablicy\+Ponad100\+Elementow}]{}{}\end{DoxyParamCaption})}
+
+
+
+Test który sprawdza, czy funkcja poprawnie przesortuje dużą tablicę dodatnich losowych wartości. 
+
+Tablica {\ttfamily input} zawiera już posortowane wartości. Są to dane wejściowe.
+
+Zmienna {\ttfamily size} przechowuje wielkość tablicy.
+
+Aby wygenerować losowe wartości, użyto funkcji {\ttfamily rand()}
+
+\doxylink{class_merge_sort}{Merge\+Sort} tworzy obiekt z tablicą {\ttfamily input} oraz obiektem {\ttfamily size}.
+
+Poprzez wywołanie \doxylink{class_merge_sort}{Merge\+Sort} \doxylink{class_merge_sort_a7678aa9eb919740851247f4f1af211cd}{Merge\+Sort\+::get\+Array()}, wskaźnik do \doxylink{class_merge_sort_a677b7f49b8d82aee2b3c28d403c6c455}{Merge\+Sort\+::arr} jest przekazany do zmiennej {\ttfamily temp\+Array}.
+
+Wywołanie {\ttfamily std\+::sort} na tablicy, aby przesortować podaną tablicę z biblioteki {\ttfamily cstdlib}
+
+Pętla {\ttfamily for} porównuje makrem {\ttfamily EXPECT\+\_\+\+EQ} wartości tablicy {\ttfamily input\+Array} z tablicą {\ttfamily temp\+Array}.
+
+
+\begin{DoxyParams}{Parametry}
+{\em Sortowanie} & \\
+\hline
+{\em Tablica\+Niezmieniona} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{test_8cpp_ac47b41c3027da1567f91c00a7a8f7cbf}\index{test.cpp@{test.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test.cpp@{test.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [3/14]}}
+{\footnotesize\ttfamily \label{test_8cpp_ac47b41c3027da1567f91c00a7a8f7cbf} 
+TEST (\begin{DoxyParamCaption}\item[{Sortowanie}]{}{, }\item[{Sortowanie\+Duzej\+Tablicy\+Ponad100\+Elementow\+Ujemnych\+Dodatnich\+Duplikatow}]{}{}\end{DoxyParamCaption})}
+
+
+
+Test który sprawdza, czy funkcja poprawnie przesortuje dużą tablicę losowych wartości dodatnich, ujemnych i duplikatów. 
+
+Tablica {\ttfamily input} zawiera już posortowane wartości. Są to dane wejściowe.
+
+Zmienna {\ttfamily size} przechowuje wielkość tablicy.
+
+Aby wygenerować losowe wartości, użyto funkcji {\ttfamily rand()}
+
+\doxylink{class_merge_sort}{Merge\+Sort} tworzy obiekt z tablicą {\ttfamily input} oraz obiektem {\ttfamily size}.
+
+Poprzez wywołanie \doxylink{class_merge_sort}{Merge\+Sort} \doxylink{class_merge_sort_a7678aa9eb919740851247f4f1af211cd}{Merge\+Sort\+::get\+Array()}, wskaźnik do \doxylink{class_merge_sort_a677b7f49b8d82aee2b3c28d403c6c455}{Merge\+Sort\+::arr} jest przekazany do zmiennej {\ttfamily temp\+Array}.
+
+Wywołanie {\ttfamily std\+::sort} na tablicy, aby przesortować podaną tablicę z biblioteki {\ttfamily cstdlib}
+
+Pętla {\ttfamily for} porównuje makrem {\ttfamily EXPECT\+\_\+\+EQ} wartości tablicy {\ttfamily input\+Array} z tablicą {\ttfamily temp\+Array}.
+
+
+\begin{DoxyParams}{Parametry}
+{\em Sortowanie} & \\
+\hline
+{\em Tablica\+Niezmieniona} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{test_8cpp_a7da031367575c574e767327c7f938770}\index{test.cpp@{test.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test.cpp@{test.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [4/14]}}
+{\footnotesize\ttfamily \label{test_8cpp_a7da031367575c574e767327c7f938770} 
+TEST (\begin{DoxyParamCaption}\item[{Sortowanie}]{}{, }\item[{Sortowanie\+Losowej\+Tablicy\+Liczb}]{}{}\end{DoxyParamCaption})}
+
+
+
+Test który sprawdza, czy funkcja poprawnie przesortuje tablicę dodatnich losowych wartości. 
+
+Tablica {\ttfamily input} zawiera już posortowane wartości. Są to dane wejściowe.
+
+Zmienna {\ttfamily size} przechowuje wielkość tablicy.
+
+Aby wygenerować losowe wartości, użyto funkcji {\ttfamily rand()}
+
+\doxylink{class_merge_sort}{Merge\+Sort} tworzy obiekt z tablicą {\ttfamily input} oraz obiektem {\ttfamily size}.
+
+Poprzez wywołanie \doxylink{class_merge_sort}{Merge\+Sort} \doxylink{class_merge_sort_a7678aa9eb919740851247f4f1af211cd}{Merge\+Sort\+::get\+Array()}, wskaźnik do \doxylink{class_merge_sort_a677b7f49b8d82aee2b3c28d403c6c455}{Merge\+Sort\+::arr} jest przekazany do zmiennej {\ttfamily temp\+Array}.
+
+Wywołanie {\ttfamily std\+::sort} na tablicy, aby przesortować podaną tablicę z biblioteki {\ttfamily cstdlib}
+
+Pętla {\ttfamily for} porównuje makrem {\ttfamily EXPECT\+\_\+\+EQ} wartości tablicy {\ttfamily input\+Array} z tablicą {\ttfamily temp\+Array}.
+
+
+\begin{DoxyParams}{Parametry}
+{\em Sortowanie} & \\
+\hline
+{\em Tablica\+Niezmieniona} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{test_8cpp_a34c58f054946e60c3fbcb972b7d355e1}\index{test.cpp@{test.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test.cpp@{test.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [5/14]}}
+{\footnotesize\ttfamily \label{test_8cpp_a34c58f054946e60c3fbcb972b7d355e1} 
+TEST (\begin{DoxyParamCaption}\item[{Sortowanie}]{}{, }\item[{Sortowanie\+Tablicy\+Dwa\+Elementy\+Rosnaco}]{}{}\end{DoxyParamCaption})}
+
+
+
+Test który sprawdza, czy funkcja poprawnie przesortuje tablicę dwuelementową rosnącą. 
+
+Tablica {\ttfamily input} zawiera już posortowane wartości. Są to dane wejściowe.
+
+Zmienna {\ttfamily size} przechowuje wielkość tablicy.
+
+\doxylink{class_merge_sort}{Merge\+Sort} tworzy obiekt z tablicą {\ttfamily input} oraz obiektem {\ttfamily size}.
+
+Poprzez wywołanie \doxylink{class_merge_sort}{Merge\+Sort} \doxylink{class_merge_sort_a7678aa9eb919740851247f4f1af211cd}{Merge\+Sort\+::get\+Array()}, wskaźnik do \doxylink{class_merge_sort_a677b7f49b8d82aee2b3c28d403c6c455}{Merge\+Sort\+::arr} jest przekazany do zmiennej {\ttfamily temp\+Array}.
+
+Wywołanie {\ttfamily std\+::sort} na tablicy, aby przesortować podaną tablicę z biblioteki {\ttfamily cstdlib}
+
+Pętla {\ttfamily for} porównuje makrem {\ttfamily EXPECT\+\_\+\+EQ} wartości tablicy {\ttfamily input\+Array} z tablicą {\ttfamily temp\+Array}.
+
+
+\begin{DoxyParams}{Parametry}
+{\em Sortowanie} & \\
+\hline
+{\em Tablica\+Niezmieniona} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{test_8cpp_a065cebb812a474033c5eccfaddb3152f}\index{test.cpp@{test.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test.cpp@{test.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [6/14]}}
+{\footnotesize\ttfamily \label{test_8cpp_a065cebb812a474033c5eccfaddb3152f} 
+TEST (\begin{DoxyParamCaption}\item[{Sortowanie}]{}{, }\item[{Sortowanie\+Tablicy\+Odwrotnej\+Kolejnosci}]{}{}\end{DoxyParamCaption})}
+
+
+
+Test który sprawdza, czy funkcja poprawnie przesortuje tablicę podaną w odwrotnej kolejności. 
+
+Tablica {\ttfamily input} zawiera już posortowane wartości. Są to dane wejściowe.
+
+Zmienna {\ttfamily size} przechowuje wielkość tablicy.
+
+\doxylink{class_merge_sort}{Merge\+Sort} tworzy obiekt z tablicą {\ttfamily input} oraz obiektem {\ttfamily size}.
+
+Poprzez wywołanie \doxylink{class_merge_sort}{Merge\+Sort} \doxylink{class_merge_sort_a7678aa9eb919740851247f4f1af211cd}{Merge\+Sort\+::get\+Array()}, wskaźnik do \doxylink{class_merge_sort_a677b7f49b8d82aee2b3c28d403c6c455}{Merge\+Sort\+::arr} jest przekazany do zmiennej {\ttfamily temp\+Array}.
+
+Wywołanie {\ttfamily std\+::sort} na tablicy, aby przesortować podaną tablicę z biblioteki {\ttfamily cstdlib}
+
+Pętla {\ttfamily for} porównuje makrem {\ttfamily EXPECT\+\_\+\+EQ} wartości tablicy {\ttfamily input\+Array} z tablicą {\ttfamily temp\+Array}.
+
+
+\begin{DoxyParams}{Parametry}
+{\em Sortowanie} & \\
+\hline
+{\em Tablica\+Niezmieniona} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{test_8cpp_ae82a712d4afbb2da5254d123d2b09565}\index{test.cpp@{test.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test.cpp@{test.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [7/14]}}
+{\footnotesize\ttfamily \label{test_8cpp_ae82a712d4afbb2da5254d123d2b09565} 
+TEST (\begin{DoxyParamCaption}\item[{Sortowanie}]{}{, }\item[{Sortowanie\+Tablicy\+Ujemnych\+Dodatnich\+IDuplikatow}]{}{}\end{DoxyParamCaption})}
+
+
+
+Test który sprawdza, czy funkcja poprawnie przesortuje tablicę wartości dodatnich, ujemnych z duplikatami. 
+
+Tablica {\ttfamily input} zawiera już posortowane wartości. Są to dane wejściowe.
+
+Zmienna {\ttfamily size} przechowuje wielkość tablicy.
+
+\doxylink{class_merge_sort}{Merge\+Sort} tworzy obiekt z tablicą {\ttfamily input} oraz obiektem {\ttfamily size}.
+
+Poprzez wywołanie \doxylink{class_merge_sort}{Merge\+Sort} \doxylink{class_merge_sort_a7678aa9eb919740851247f4f1af211cd}{Merge\+Sort\+::get\+Array()}, wskaźnik do \doxylink{class_merge_sort_a677b7f49b8d82aee2b3c28d403c6c455}{Merge\+Sort\+::arr} jest przekazany do zmiennej {\ttfamily temp\+Array}.
+
+Wywołanie {\ttfamily std\+::sort} na tablicy, aby przesortować podaną tablicę z biblioteki {\ttfamily cstdlib}
+
+Pętla {\ttfamily for} porównuje makrem {\ttfamily EXPECT\+\_\+\+EQ} wartości tablicy {\ttfamily input\+Array} z tablicą {\ttfamily temp\+Array}.
+
+
+\begin{DoxyParams}{Parametry}
+{\em Sortowanie} & \\
+\hline
+{\em Tablica\+Niezmieniona} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{test_8cpp_a50a7a6985417cab655727d66906fc85a}\index{test.cpp@{test.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test.cpp@{test.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [8/14]}}
+{\footnotesize\ttfamily \label{test_8cpp_a50a7a6985417cab655727d66906fc85a} 
+TEST (\begin{DoxyParamCaption}\item[{Sortowanie}]{}{, }\item[{Sortowanie\+Tablicy\+Ujemnych\+IDodatnich\+Wartosci}]{}{}\end{DoxyParamCaption})}
+
+
+
+Test który sprawdza, czy funkcja poprawnie przesortuje tablicę ujemnych i dodatnich wartości. 
+
+Tablica {\ttfamily input} zawiera już posortowane wartości. Są to dane wejściowe.
+
+Zmienna {\ttfamily size} przechowuje wielkość tablicy.
+
+\doxylink{class_merge_sort}{Merge\+Sort} tworzy obiekt z tablicą {\ttfamily input} oraz obiektem {\ttfamily size}.
+
+Poprzez wywołanie \doxylink{class_merge_sort}{Merge\+Sort} \doxylink{class_merge_sort_a7678aa9eb919740851247f4f1af211cd}{Merge\+Sort\+::get\+Array()}, wskaźnik do \doxylink{class_merge_sort_a677b7f49b8d82aee2b3c28d403c6c455}{Merge\+Sort\+::arr} jest przekazany do zmiennej {\ttfamily temp\+Array}.
+
+Wywołanie {\ttfamily std\+::sort} na tablicy, aby przesortować podaną tablicę z biblioteki {\ttfamily cstdlib}
+
+Pętla {\ttfamily for} porównuje makrem {\ttfamily EXPECT\+\_\+\+EQ} wartości tablicy {\ttfamily input\+Array} z tablicą {\ttfamily temp\+Array}.
+
+
+\begin{DoxyParams}{Parametry}
+{\em Sortowanie} & \\
+\hline
+{\em Tablica\+Niezmieniona} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{test_8cpp_a3d4154d2944f39c12cda125ce22304f7}\index{test.cpp@{test.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test.cpp@{test.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [9/14]}}
+{\footnotesize\ttfamily \label{test_8cpp_a3d4154d2944f39c12cda125ce22304f7} 
+TEST (\begin{DoxyParamCaption}\item[{Sortowanie}]{}{, }\item[{Sortowanie\+Tablicy\+Ujemnych\+Wartosci}]{}{}\end{DoxyParamCaption})}
+
+
+
+Test który sprawdza, czy funkcja poprawnie przesortuje tablicę ujemnych wartości. 
+
+Tablica {\ttfamily input} zawiera już posortowane wartości. Są to dane wejściowe.
+
+Zmienna {\ttfamily size} przechowuje wielkość tablicy.
+
+\doxylink{class_merge_sort}{Merge\+Sort} tworzy obiekt z tablicą {\ttfamily input} oraz obiektem {\ttfamily size}.
+
+Poprzez wywołanie \doxylink{class_merge_sort}{Merge\+Sort} \doxylink{class_merge_sort_a7678aa9eb919740851247f4f1af211cd}{Merge\+Sort\+::get\+Array()}, wskaźnik do \doxylink{class_merge_sort_a677b7f49b8d82aee2b3c28d403c6c455}{Merge\+Sort\+::arr} jest przekazany do zmiennej {\ttfamily temp\+Array}.
+
+Wywołanie {\ttfamily std\+::sort} na tablicy, aby przesortować podaną tablicę z biblioteki {\ttfamily cstdlib}
+
+Pętla {\ttfamily for} porównuje makrem {\ttfamily EXPECT\+\_\+\+EQ} wartości tablicy {\ttfamily input\+Array} z tablicą {\ttfamily temp\+Array}.
+
+
+\begin{DoxyParams}{Parametry}
+{\em Sortowanie} & \\
+\hline
+{\em Tablica\+Niezmieniona} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{test_8cpp_ab520e87e20fb655d2b46b12b795b082b}\index{test.cpp@{test.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test.cpp@{test.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [10/14]}}
+{\footnotesize\ttfamily \label{test_8cpp_ab520e87e20fb655d2b46b12b795b082b} 
+TEST (\begin{DoxyParamCaption}\item[{Sortowanie}]{}{, }\item[{Sortowanie\+Tablicy\+ZDuplikatami}]{}{}\end{DoxyParamCaption})}
+
+
+
+Test który sprawdza, czy funkcja poprawnie przesortuje tablicę dodatnich wartości z duplikatami. 
+
+Tablica {\ttfamily input} zawiera już posortowane wartości. Są to dane wejściowe.
+
+Zmienna {\ttfamily size} przechowuje wielkość tablicy.
+
+\doxylink{class_merge_sort}{Merge\+Sort} tworzy obiekt z tablicą {\ttfamily input} oraz obiektem {\ttfamily size}.
+
+Poprzez wywołanie \doxylink{class_merge_sort}{Merge\+Sort} \doxylink{class_merge_sort_a7678aa9eb919740851247f4f1af211cd}{Merge\+Sort\+::get\+Array()}, wskaźnik do \doxylink{class_merge_sort_a677b7f49b8d82aee2b3c28d403c6c455}{Merge\+Sort\+::arr} jest przekazany do zmiennej {\ttfamily temp\+Array}.
+
+Wywołanie {\ttfamily std\+::sort} na tablicy, aby przesortować podaną tablicę z biblioteki {\ttfamily cstdlib}
+
+Pętla {\ttfamily for} porównuje makrem {\ttfamily EXPECT\+\_\+\+EQ} wartości tablicy {\ttfamily input\+Array} z tablicą {\ttfamily temp\+Array}.
+
+
+\begin{DoxyParams}{Parametry}
+{\em Sortowanie} & \\
+\hline
+{\em Tablica\+Niezmieniona} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{test_8cpp_a6677aa72d9d623054d673248d8ccd6ed}\index{test.cpp@{test.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test.cpp@{test.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [11/14]}}
+{\footnotesize\ttfamily \label{test_8cpp_a6677aa72d9d623054d673248d8ccd6ed} 
+TEST (\begin{DoxyParamCaption}\item[{Sortowanie}]{}{, }\item[{Sortowanie\+Tablicy\+ZUjemnymi\+Duplikatami}]{}{}\end{DoxyParamCaption})}
+
+
+
+Test który sprawdza, czy funkcja poprawnie przesortuje tablicę ujemnych wartości z duplikatami. 
+
+Tablica {\ttfamily input} zawiera już posortowane wartości. Są to dane wejściowe.
+
+Zmienna {\ttfamily size} przechowuje wielkość tablicy.
+
+\doxylink{class_merge_sort}{Merge\+Sort} tworzy obiekt z tablicą {\ttfamily input} oraz obiektem {\ttfamily size}.
+
+Poprzez wywołanie \doxylink{class_merge_sort}{Merge\+Sort} \doxylink{class_merge_sort_a7678aa9eb919740851247f4f1af211cd}{Merge\+Sort\+::get\+Array()}, wskaźnik do \doxylink{class_merge_sort_a677b7f49b8d82aee2b3c28d403c6c455}{Merge\+Sort\+::arr} jest przekazany do zmiennej {\ttfamily temp\+Array}.
+
+Wywołanie {\ttfamily std\+::sort} na tablicy, aby przesortować podaną tablicę z biblioteki {\ttfamily cstdlib}
+
+Pętla {\ttfamily for} porównuje makrem {\ttfamily EXPECT\+\_\+\+EQ} wartości tablicy {\ttfamily input\+Array} z tablicą {\ttfamily temp\+Array}.
+
+
+\begin{DoxyParams}{Parametry}
+{\em Sortowanie} & \\
+\hline
+{\em Tablica\+Niezmieniona} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{test_8cpp_a936a65145031eb76fe56d6fb67e6962f}\index{test.cpp@{test.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test.cpp@{test.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [12/14]}}
+{\footnotesize\ttfamily \label{test_8cpp_a936a65145031eb76fe56d6fb67e6962f} 
+TEST (\begin{DoxyParamCaption}\item[{Sortowanie}]{}{, }\item[{Tablica\+Jednoelementowa}]{}{}\end{DoxyParamCaption})}
+
+
+
+Test który sprawdza, czy funkcja poprawnie przesortuje tablicę jednoelementową. 
+
+Tablica {\ttfamily input} zawiera już posortowane wartości. Są to dane wejściowe.
+
+Zmienna {\ttfamily size} przechowuje wielkość tablicy.
+
+\doxylink{class_merge_sort}{Merge\+Sort} tworzy obiekt z tablicą {\ttfamily input} oraz obiektem {\ttfamily size}.
+
+Poprzez wywołanie \doxylink{class_merge_sort}{Merge\+Sort} \doxylink{class_merge_sort_a7678aa9eb919740851247f4f1af211cd}{Merge\+Sort\+::get\+Array()}, wskaźnik do \doxylink{class_merge_sort_a677b7f49b8d82aee2b3c28d403c6c455}{Merge\+Sort\+::arr} jest przekazany do zmiennej {\ttfamily temp\+Array}.
+
+Wywołanie {\ttfamily std\+::sort} na tablicy, aby przesortować podaną tablicę z biblioteki {\ttfamily cstdlib}
+
+Pętla {\ttfamily for} porównuje makrem {\ttfamily EXPECT\+\_\+\+EQ} wartości tablicy {\ttfamily input\+Array} z tablicą {\ttfamily temp\+Array}.
+
+
+\begin{DoxyParams}{Parametry}
+{\em Sortowanie} & \\
+\hline
+{\em Tablica\+Niezmieniona} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{test_8cpp_aeb63d86021126b60561cf04ad61691cf}\index{test.cpp@{test.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test.cpp@{test.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [13/14]}}
+{\footnotesize\ttfamily \label{test_8cpp_aeb63d86021126b60561cf04ad61691cf} 
+TEST (\begin{DoxyParamCaption}\item[{Sortowanie}]{}{, }\item[{Tablica\+Niezmieniona}]{}{}\end{DoxyParamCaption})}
+
+
+
+Test który sprawdza, czy funkcja zachowuje tablicę niezmienioną, gdy ona jest już posortowana rosnąco. 
+
+Tablica {\ttfamily input} zawiera już posortowane wartości. Są to dane wejściowe.
+
+Zmienna {\ttfamily size} przechowuje wielkość tablicy.
+
+\doxylink{class_merge_sort}{Merge\+Sort} tworzy obiekt z tablicą {\ttfamily input} oraz obiektem {\ttfamily size}.
+
+Poprzez wywołanie \doxylink{class_merge_sort}{Merge\+Sort} \doxylink{class_merge_sort_a7678aa9eb919740851247f4f1af211cd}{Merge\+Sort\+::get\+Array()}, wskaźnik do \doxylink{class_merge_sort_a677b7f49b8d82aee2b3c28d403c6c455}{Merge\+Sort\+::arr} jest przekazany do zmiennej {\ttfamily temp\+Array}.
+
+Pętla {\ttfamily for} porównuje makrem {\ttfamily EXPECT\+\_\+\+EQ} wartości tablicy {\ttfamily input\+Array} z tablicą {\ttfamily temp\+Array}.
+
+
+\begin{DoxyParams}{Parametry}
+{\em Sortowanie} & \\
+\hline
+{\em Tablica\+Niezmieniona} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{test_8cpp_a87b54bad20017e2bd24c706b607333d3}\index{test.cpp@{test.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test.cpp@{test.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [14/14]}}
+{\footnotesize\ttfamily \label{test_8cpp_a87b54bad20017e2bd24c706b607333d3} 
+TEST (\begin{DoxyParamCaption}\item[{Sortowanie}]{}{, }\item[{Tablica\+Niezmieniona\+Fail}]{}{}\end{DoxyParamCaption})}
+
+
+
+Test który sprawdza, czy test poprawnie zrobi fail, gdy ręcznie ustawimy inną wartość. 
+
+Tablica {\ttfamily input} zawiera już posortowane wartości. Są to dane wejściowe.
+
+Zmienna {\ttfamily size} przechowuje wielkość tablicy.
+
+\doxylink{class_merge_sort}{Merge\+Sort} tworzy obiekt z tablicą {\ttfamily input} oraz obiektem {\ttfamily size}.
+
+Poprzez wywołanie \doxylink{class_merge_sort}{Merge\+Sort} \doxylink{class_merge_sort_a7678aa9eb919740851247f4f1af211cd}{Merge\+Sort\+::get\+Array()}, wskaźnik do \doxylink{class_merge_sort_a677b7f49b8d82aee2b3c28d403c6c455}{Merge\+Sort\+::arr} jest przekazany do zmiennej {\ttfamily temp\+Array}.
+
+Ręcznia zmiana wartości indeksu 0\+: {\ttfamily temp\+Array\mbox{[}0\mbox{]} = 999;}
+
+Pętla {\ttfamily for} porównuje makrem {\ttfamily EXPECT\+\_\+\+EQ} wartości tablicy {\ttfamily input\+Array} z tablicą {\ttfamily temp\+Array}.
+
+
+\begin{DoxyParams}{Parametry}
+{\em Sortowanie} & \\
+\hline
+{\em Tablica\+Niezmieniona} & \\
+\hline
+\end{DoxyParams}

@@ -138,19 +138,8 @@ TEST(Sortowanie, SortowanieLosowejTablicyLiczb)
 		input[i] = rand() % 20;
 	}
 
-	//std::cout << "tablica wejsciowa: ";
-
-	//for (int i = 0; i < size; i++)
-	//{
-	//	std::cout << input[i] << " ";
-	//}
-
-	//std::cout << std::endl;
-
 	MergeSort arrayToSort(input, size);
 	int* tempArray = arrayToSort.getArray();
-
-
 
 	std::sort(std::begin(input), std::end(input));
 
@@ -213,6 +202,30 @@ TEST(Sortowanie, SortowanieDuzejTablicyPonad100Elementow)
 	for (int i = 0; i < size; i++)
 	{
 		input[i] = rand() % 1000;
+	}
+
+	MergeSort arrayToSort(input, size);
+
+	int* tempArray = arrayToSort.getArray();
+
+	std::sort(std::begin(input), std::end(input));
+
+	for (int i = 0; i < size; i++)
+	{
+		EXPECT_EQ(input[i], tempArray[i]) << "Wartosc " << input[i] << " nie rowna sie wartosci " << tempArray[i];
+	}
+}
+
+TEST(Sortowanie, SortowanieDuzejTablicyPonad100ElementowUjemnychDodatnichDuplikatow)
+{
+	int size = 150;
+	int input[150];
+
+	srand((unsigned)time(NULL));
+
+	for (int i = 0; i < size; i++)
+	{
+		input[i] = (rand() % 201) - 100;
 	}
 
 	MergeSort arrayToSort(input, size);

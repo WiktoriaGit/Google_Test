@@ -12,6 +12,8 @@ private:
 
 	void merge(int* arr, int left, int mid, int right);
 
+	int* getArray();
+
 public:
 	MergeSort();
 

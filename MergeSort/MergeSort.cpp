@@ -1,8 +1,8 @@
-#include <iostream>
+ï»¿#include <iostream>
 #include "MergeSort.h"
 
 /**
-* Ustawia MergeSort::size na ```0``` oraz tworzy pust¹ tablicê
+* Ustawia MergeSort::size na ```0``` oraz tworzy pustÄ… tablicÄ™
 */
 MergeSort::MergeSort()
 {
@@ -11,12 +11,12 @@ MergeSort::MergeSort()
 }
 
 /**
-* Ustawia MergeSort::size na wartoœæ przekazan¹ przez parametr ```size``` oraz
-* alokuje pamiêæ dla tablicy MergeSort::arr o rozmiarze ```size```
+* Ustawia MergeSort::size na wartoÅ›Ä‡ przekazanÄ… przez parametr ```size``` oraz
+* alokuje pamiÄ™Ä‡ dla tablicy MergeSort::arr o rozmiarze ```size```
 *
-* Inicjalizuje tablicê funkcj¹ MergeSort::setArray()
+* Inicjalizuje tablicÄ™ funkcjÄ… MergeSort::setArray()
 *
-* Sortuje tablicê wywo³uj¹c funkcjê MergeSort::sort()
+* Sortuje tablicÄ™ wywoÅ‚ujÄ…c funkcjÄ™ MergeSort::sort()
 */
 MergeSort::MergeSort(int input[], int size)
 {
@@ -29,7 +29,7 @@ MergeSort::MergeSort(int input[], int size)
 }
 
 /**
-* Destruktor wywo³uje ```delete``` na tablicy, zwalniaj¹c pamiêæ.
+* Destruktor wywoÅ‚uje ```delete``` na tablicy, zwalniajÄ…c pamiÄ™Ä‡.
 */
 MergeSort::~MergeSort()
 {
@@ -37,7 +37,7 @@ MergeSort::~MergeSort()
 }
 
 /**
-* Printowanie na ekran poszczególnych elementów tablicy za pomoc¹ pêtli ```for``` oraz ```std::cout```
+* Printowanie na ekran poszczegÃ³lnych elementÃ³w tablicy za pomocÄ… pÄ™tli ```for``` oraz ```std::cout```
 */
 void MergeSort::printArray()
 {
@@ -48,7 +48,7 @@ void MergeSort::printArray()
 }
 
 /**
-* Funkcja inicjalizuje tablicê, wype³niaj¹c j¹ indeksami pêtli ```for```
+* Funkcja inicjalizuje tablicÄ™, wypeÅ‚niajÄ…c jÄ… indeksami pÄ™tli ```for```
 */
 void MergeSort::setArray(int input[], int inputSize)
 {
@@ -58,9 +58,9 @@ void MergeSort::setArray(int input[], int inputSize)
 }
 
 /**
-* Inicjalizuje proces sortowania tablicy wywo³uj¹c rekurencyjnie MergeSort::mergeSort.
+* Inicjalizuje proces sortowania tablicy wywoÅ‚ujÄ…c rekurencyjnie MergeSort::mergeSort.
 *
-* Funkcja zakoñczy siê gdy ```size``` bêdzie ```<= 1```
+* Funkcja zakoÅ„czy siÄ™ gdy ```size``` bÄ™dzie ```<= 1```
 */
 void MergeSort::sort()
 {
@@ -71,7 +71,7 @@ void MergeSort::sort()
 }
 
 /**
-* Zwrócenie wskaŸnika ```*arr```
+* ZwrÃ³cenie wskaÅºnika ```*arr```
 */
 int* MergeSort::getArray()
 {
@@ -79,9 +79,9 @@ int* MergeSort::getArray()
 }
 
 /**
-* Wywo³ywana rekurencj¹. Wyznacza œrodek tablicy i przekazuje jako parametr granice do podzia³u na mniejsze tablice.
+* WywoÅ‚ywana rekurencjÄ…. Wyznacza Å›rodek tablicy i przekazuje jako parametr granice do podziaÅ‚u na mniejsze tablice.
 *
-* Gdy tablice bêd¹ wystarczaj¹co ma³e, nastêpuje wywo³anie MergeSort::merge() aby posortowaæ i scaliæ tablice.
+* Gdy tablice bÄ™dÄ… wystarczajÄ…co maÅ‚e, nastÄ™puje wywoÅ‚anie MergeSort::merge() aby posortowaÄ‡ i scaliÄ‡ tablice.
 */
 void MergeSort::mergeSort(int* arr, int left, int right)
 {
@@ -97,15 +97,15 @@ void MergeSort::mergeSort(int* arr, int left, int right)
 }
 
 /**
-* Wyznaczane s¹ wielkoœci ```n1``` oraz ```n2``` dla nowych tablic ```leftArr``` oraz ```rightArr``` oraz alokacja pamiêci.
+* Wyznaczane sÄ… wielkoÅ›ci ```n1``` oraz ```n2``` dla nowych tablic ```leftArr``` oraz ```rightArr``` oraz alokacja pamiÄ™ci.
 *
-* Dane s¹ kopiowane do nowych tablic ```leftArr``` oraz ```rightArr```.
+* Dane sÄ… kopiowane do nowych tablic ```leftArr``` oraz ```rightArr```.
 *
-* Nastêpnie s¹ tablice sortowane przez porównanie oraz scalane.
+* NastÄ™pnie sÄ… tablice sortowane przez porÃ³wnanie oraz scalane.
 *
-* Je¿eli pozosta³y jakiekolwiek elementy w tablicach, s¹ one tak¿e kopiowane.
+* JeÅ¼eli pozostaÅ‚y jakiekolwiek elementy w tablicach, sÄ… one takÅ¼e kopiowane.
 *
-* Na samym koñcu nastêpuje zwolnienie pamiêci dla dwóch tymczasowych tablic.
+* Na samym koÅ„cu nastÄ™puje zwolnienie pamiÄ™ci dla dwÃ³ch tymczasowych tablic.
 */
 void MergeSort::merge(int* arr, int left, int mid, int right)
 {

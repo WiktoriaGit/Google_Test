@@ -46,6 +46,11 @@ void MergeSort::sort()
     mergeSort(arr, 0, size - 1);
 }
 
+int* MergeSort::getArray()
+{
+    return this->arr;
+}
+
 void MergeSort::mergeSort(int* arr, int left, int right)
 {
     if (left < right) {

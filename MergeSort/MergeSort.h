@@ -24,5 +24,7 @@ public:
 	void setArray(int input[], int inputSize);
 
 	void sort();
+
+	int* getArray();
 };
 

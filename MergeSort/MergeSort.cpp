@@ -108,8 +108,3 @@ void MergeSort::merge(int* arr, int left, int mid, int right)
     delete[] leftArr;
     delete[] rightArr;
 }
-
-int* MergeSort::getArray()
-{
-    return this->arr;
-}
